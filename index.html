@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="icon" type="image/x-icon" href="1240255-middle.ico">
+    <title>Olga's Birthday Site</title>
+</head>
+<body>
+    <div class="night">
+        <img class="berton" src="./img/IMG_4037.PNG" alt="">
+        <img class="duck" src="./img/duck.png" alt="">
+        <div id="first-question-block" class="question-block">
+            <h3>Введи кодове слово для того, щоб відкрити зашифрований контент:</h3>
+            <label for="nameEuro">Ім'я виконавця твоєї улюбленої країни на Євробаченні, якого ти могла б зустріти в місті, де ти проходила практику літом:</label>
+            <input id="nameEuro">
+            <span class="error-message" id="validation-message-euro"></span>
+            <button type="button" onclick="submit('nameEuro', 'IMRI', 'first-question-block', 'first-block', 'Думай ще', 'validation-message-euro')">Підтвердити</button>
+        </div>
+        <div id="first-block" class="content-block hidden">
+            <h3>Урааааа!</h3>
+            <video id="snow-video" width="100%" height="80%" controls>
+                <source src="IMG_5981.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+    <div id="olive_trees" class="olive_trees hidden">
+        <img class="ariel" src="./img/IMG_4011.PNG" alt="">
+        <img class="sheep" src="./img/sheep.png" alt="">
+        <div id="second-question-block" class="question-block">
+            <h3>Введи кодове слово для того, щоб відкрити зашифрований контент:</h3>
+            <label for="colibri">Пташка, про яку ти активно співала одного літа:</label>
+            <input id="colibri">
+            <span class="error-message" id="validation-message-colibri"></span>
+            <button type="button" onclick="submit('colibri', 'КОЛІБРІ', 'second-question-block', 'second-block', 'Подумай, згадай..', 'validation-message-colibri')">Підтвердити</button>
+        </div>
+        <div id="second-block" class="content-block hidden">
+            <h3>Урааааа!</h3>
+            <video id="cover-video" width="100%" height="80%" controls>
+                <source src="IMG_3998.MP4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+    <div id="night_city" class="night_city hidden">
+        <img class="guitar" src="./img/IMG_4033.PNG" alt="">
+        <img class="rbd" src="./img/IMG_4026.PNG" alt="">
+        <div id="third-question-block" class="question-block">
+            <h3>Продовжи фразу, щоб відкрити зашифрований контент:</h3>
+            <label for="rabbit">Ану, ви бачили ...</label>
+            <input id="rabbit">
+            <span class="error-message" id="validation-message-rabbit"></span>
+            <button type="button" onclick="submit('rabbit', 'КРОЛЯ', 'third-question-block', 'third-block', 'Оля, не тупи!', 'validation-message-rabbit')">Підтвердити</button>
+        </div>
+        <div id="third-block" class="question-block hidden">
+            <a href="https://www.lilelovanalilea.com/" target="_blank">Клікай!</a>
+        </div>
+    </div>
+
+    <script>
+            const snowVideo = document.getElementById("snow-video");
+            snowVideo.onended = function() {
+                document.getElementById("olive_trees").classList.remove("hidden");
+                document.getElementById("olive_trees").scrollIntoView({"behaviour": "smooth"});
+            };
+
+            const coverVideo = document.getElementById("cover-video");
+            coverVideo.onended = function() {
+                document.getElementById("night_city").classList.remove("hidden");
+                document.getElementById("night_city").scrollIntoView({"behaviour": "smooth"});
+            };
+
+        function submit(input, response, questionBlock, block, errorText, validationText) {
+            const nameEuro = document.getElementById(input);
+            let text;
+            if (nameEuro.value.toUpperCase() === response) {
+                text = "";
+                document.getElementById(questionBlock).classList.add("hidden");
+                document.getElementById(block).classList.remove("hidden");
+            } else {
+                text = errorText;
+            }
+            nameEuro.value = '';
+            document.getElementById(validationText).innerHTML = text;
+        }
+    </script>
+</body>
+</html>
