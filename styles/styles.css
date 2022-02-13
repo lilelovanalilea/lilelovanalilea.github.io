@@ -1,0 +1,124 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+}
+
+.ariel {
+    position: absolute;
+    width: 152px;
+    right: 100px;
+    top: 20px;
+}
+
+.sheep {
+    position: absolute;
+    width: 136px;
+    left: 34px;
+    top: 323px;
+}
+
+.duck {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    top: 285px;
+    left: 52px;
+}
+
+.berton {
+    position: absolute;
+    width: 368px;
+    right: 0;
+    top: 43px;
+}
+
+.guitar {
+    position: absolute;
+    width: 400px;
+    top: 179px;
+    left: 40px;
+}
+
+.rbd {
+    right: 0px;
+    position: absolute;
+    width: 718px;
+    top: 70px;
+}
+
+.night {
+    position: relative;
+    background: url('../img/night.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    height: 100vh;
+}
+
+.olive_trees {
+    position: relative;
+    background: url('../img/olive_trees.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    height: 100vh;
+}
+
+.night_city {
+    position: relative;
+    background: url('../img/night_city.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    height: 100vh;
+}
+
+.question-block {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    margin: auto;
+    background: white;
+    opacity: 70%;
+    padding: 15px;
+}
+
+.question-block input {
+    width: 98%;
+    height: 20px;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.question-block button {
+    cursor: pointer;
+    width: 105px;
+    background: green;
+    color: white;
+    height: 30px;
+    border: none;
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.error-message {
+    margin: 5px 0;
+    color: red;
+}
+
+.content-block {
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    width: 60%;
+    align-items: center;
+    color: palevioletred;
+    background: aliceblue;
+}
+
+.hidden {
+    display: none;
+}
